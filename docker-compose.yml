@@ -1,0 +1,21 @@
+version: "3.8" # Recommended to use a more recent version like 3.8
+
+services:
+  lab-bd-app:
+    container_name: lab-bd-app
+    build: .
+    volumes:
+      - .:/app # Mounts the current directory to /app in the container
+    ports:
+      - "8888:8888" # Maps port 8888 of the container to port 8888 on the host
+    environment:
+      - NAME=World
+    command:
+      [
+        "jupyter",
+        "notebook",
+        "--ip=0.0.0.0",
+        "--allow-root",
+        "--NotebookApp.token=''",
+      ]
+    # command overrides the CMD in Dockerfile, specifying the Jupyter command here

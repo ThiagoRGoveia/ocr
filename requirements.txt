@@ -1,0 +1,12 @@
+jurigged
+streamlit
+python-dotenv
+opencv-python
+jupyter
+numpy
+pdf2image
+PyPDF2 
+Pillow
+pytesseract
+streamlit
+python-dotenv
